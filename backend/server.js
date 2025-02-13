@@ -16,12 +16,16 @@ const jobNewsRoutes = require('./route/JobNews'); // 직무 뉴스 라우트
 
 app.use(
     cors({
-        origin: 'http://localhost:5173',
+        origin: [
+            'http://localhost:5173', // 개발 환경
+            'https://interviewai-ij1p.onrender.com', // ✅ Vercel에 배포된 프론트엔드 URL 추가
+        ],
         methods: ['GET', 'POST', 'OPTIONS'],
         allowedHeaders: ['Content-Type'],
         credentials: true,
     })
 );
+
 app.use('/auth', loginRoutes);
 app.use('/api', openApiRoutes);
 app.use('/api', interviewResultRoutes);
@@ -29,5 +33,6 @@ app.use('/api', jobNewsRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Server running on port ${PORT}`);
+    console.log(`API is live at: ${process.env.RENDER_EXTERNAL_URL || 'http://localhost:' + PORT}`);
 });
