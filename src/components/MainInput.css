@@ -1,0 +1,19 @@
+.MainInput {
+    width: 35%;
+    height: 100%;
+    padding: 3% 5% 0;
+    overflow-y: scroll;
+
+    /* background: url(/public/logo.png);
+    background-repeat: no-repeat; */
+}
+
+.OrLine {
+    width: 90%;
+    height: 1px;
+}
+
+.BtnWrap img {
+    object-fit: contain;
+    width: 80%;
+}

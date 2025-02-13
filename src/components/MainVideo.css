@@ -1,0 +1,18 @@
+.MainVideo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.MainVideo video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.video-2 {
+    width: 65%;
+}
+.video-3 {
+    width: 100%;
+}

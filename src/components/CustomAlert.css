@@ -1,0 +1,21 @@
+.custom-popup {
+    backdrop-filter: blur(10px); /* 배경 흐림 효과 */
+    border-radius: 16px; /* 둥근 모서리 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* 그림자 */
+}
+
+.custom-confirm-button {
+    background: linear-gradient(90deg, #c54261, #f47555);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.custom-confirm-button:hover {
+    background: linear-gradient(90deg, #f47555, #c54261);
+}
+
