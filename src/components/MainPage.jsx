@@ -6,7 +6,7 @@ import MainVideo from './MainVideo';
 
 async function fetchRegister(name, email, password) {
     try {
-        const response = await fetch('http://localhost:5000/auth/register', {
+        const response = await fetch('https://interviewai-ij1p.onrender.com/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ async function fetchRegister(name, email, password) {
 
 async function fetchQuestions(job) {
     try {
-        const response = await fetch('http://localhost:5000/api/generate-questions', {
+        const response = await fetch('https://interviewai-ij1p.onrender.com/api/generate-questions', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

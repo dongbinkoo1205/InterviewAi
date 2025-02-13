@@ -32,7 +32,7 @@ function JobNews() {
     useEffect(() => {
         const fetchNews = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/news?query=${job}`);
+                const response = await fetch(`https://interviewai-ij1p.onrender.com/api/news?query=${job}`);
                 const data = await response.json();
                 setNews(data.articles || []);
             } catch (error) {
