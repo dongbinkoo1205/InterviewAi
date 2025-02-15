@@ -6,15 +6,17 @@ const app = express();
 const PORT = process.env.PORT || 10000;
 
 // ✅ CORS 설정 (OPTIONS 요청 허용)
-app.use(cors({
-    origin: [
-        'http://localhost:5173', // 개발 환경
-        'https://interview-c4s12l05c-dongbinkoos-projects.vercel.app', // 배포된 프론트엔드
-    ],
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // 허용할 HTTP 메서드
-    allowedHeaders: ['Content-Type', 'Authorization'], // 허용할 헤더
-    credentials: true, // 쿠키 및 인증 정보 포함
-}));
+app.use(
+    cors({
+        origin: [
+            'http://localhost:5173', // 개발 환경
+            'https://interview-c4s12l05c-dongbinkoos-projects.vercel.app', // 배포된 프론트엔드
+        ],
+        methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // 허용할 HTTP 메서드
+        allowedHeaders: ['Content-Type', 'Authorization'], // 허용할 헤더
+        credentials: true, // 쿠키 및 인증 정보 포함
+    })
+);
 
 // ✅ CORS 프리플라이트 요청 수동 처리
 app.options('*', cors());

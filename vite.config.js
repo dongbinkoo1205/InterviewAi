@@ -7,7 +7,7 @@ export default defineConfig({
     server: {
         proxy: {
             '/api': {
-                target: 'https://interview-c4s12l05c-dongbinkoos-projects.vercel.app',
+                target: 'https://interviewai-ij1p.onrender.com',
                 changeOrigin: true,
                 secure: false,
             },
