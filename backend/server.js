@@ -8,8 +8,9 @@ const PORT = process.env.PORT || 10000;
 app.use(
     cors({
         origin: [
-            'https://interview-ai-omega.vercel.app', // 프론트엔드 도메인
+            'https://interview-ai-omega.vercel.app', // 기존 프론트엔드
             'http://localhost:5173', // 개발 환경
+            'https://interview-jnesjmgnf-dongbinkoos-projects.vercel.app', // 🚀 새 프론트엔드 추가!
         ],
         methods: ['GET', 'POST', 'OPTIONS'], // 허용할 HTTP 메서드
         allowedHeaders: ['Content-Type', 'Authorization'], // 허용할 헤더
