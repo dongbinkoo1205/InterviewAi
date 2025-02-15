@@ -1,6 +1,6 @@
 async function fetchRegister(name, email, password) {
     try {
-        const response = await fetch('https://interview-c4s12l05c-dongbinkoos-projects.vercel.app/auth/register', {
+        const response = await fetch('https://interviewai-ij1p.onrender.com/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
