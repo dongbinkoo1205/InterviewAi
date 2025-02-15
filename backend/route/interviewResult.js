@@ -13,7 +13,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 // 면접 답변 평가 API
-router.post('/evaluate-answers', async (req, res) => {
+router.post('/', async (req, res) => {
     console.log('Received evaluation request:', req.body);
     const { answers, questions } = req.body;
 
