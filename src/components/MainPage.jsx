@@ -30,7 +30,7 @@ async function fetchRegister(name, email, password) {
 
 async function fetchQuestions(job) {
     try {
-        const response = await fetch('https://interviewai-ij1p.onrender.com/api/generate-questions', {
+        const response = await fetch('https://interviewai-ij1p.onrender.com/api/openai/generate-questions', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
