@@ -1,6 +1,6 @@
 async function fetchResult(answers, questions) {
     try {
-        const response = await fetch('/api/evaluate-answers', {
+        const response = await fetch('https://interviewai-ij1p.onrender.com/api/evaluate-answers', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ answers, questions }),
