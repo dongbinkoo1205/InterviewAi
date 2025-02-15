@@ -6,7 +6,7 @@ import MainVideo from './MainVideo';
 
 async function fetchRegister(name, email, password) {
     try {
-        const response = await fetch('https://interviewai-ij1p.onrender.com/auth/register', {
+        const response = await fetch('https://interview-c4s12l05c-dongbinkoos-projects.vercel.app/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -30,13 +30,16 @@ async function fetchRegister(name, email, password) {
 
 async function fetchQuestions(job) {
     try {
-        const response = await fetch('https://interviewai-ij1p.onrender.com/api/generate-questions', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ job }),
-        });
+        const response = await fetch(
+            'https://interview-c4s12l05c-dongbinkoos-projects.vercel.app/api/generate-questions',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ job }),
+            }
+        );
 
         if (!response.ok) {
             throw new Error('Failed to fetch questions');

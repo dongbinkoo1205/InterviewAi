@@ -32,7 +32,9 @@ function JobNews() {
     useEffect(() => {
         const fetchNews = async () => {
             try {
-                const response = await fetch(`https://interview-c4s12l05c-dongbinkoos-projects.vercel.app/api/news?query=${job}`);
+                const response = await fetch(
+                    `https://interview-c4s12l05c-dongbinkoos-projects.vercel.app/api/news?query=${job}`
+                );
                 const data = await response.json();
                 setNews(data.articles || []);
             } catch (error) {

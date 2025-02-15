@@ -12,6 +12,7 @@ const GOOGLE_NEWS_API_URL = 'https://newsapi.org/v2/everything';
 router.get('/news', async (req, res) => {
     try {
         const { query } = req.query;
+        console.log('Received query:', query); // 로그 추가
         if (!query) {
             return res.status(400).json({ error: 'Query parameter is required' });
         }

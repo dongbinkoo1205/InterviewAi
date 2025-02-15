@@ -18,8 +18,6 @@ app.use(
     })
 );
 
-app.options('*', cors());
-
 // ✅ CORS 프리플라이트 요청 수동 처리
 app.options('*', cors());
 
@@ -48,4 +46,8 @@ app.use('/api/jobnews', jobNewsRoutes);
 app.listen(PORT, () => {
     console.log(`✅ Server running on port ${PORT}`);
     console.log(`🔗 API is live at: ${process.env.RENDER_EXTERNAL_URL || 'http://localhost:' + PORT}`);
+});
+app.use((req, res, next) => {
+    console.log('Received request:', req.method, req.path); // 로그 추가
+    next();
 });
