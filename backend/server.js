@@ -9,7 +9,7 @@ app.use(
     cors({
         origin: [
             'http://localhost:5173', // 개발 환경
-            'https://interview-c4s12l05c-dongbinkoos-projects.vercel.app', // 배포된 프론트엔드
+            'https://interviewai-ij1p.onrender.com', // 배포된 프론트엔드
         ],
         methods: ['GET', 'POST', 'OPTIONS'],
         allowedHeaders: ['Content-Type'],
