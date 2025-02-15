@@ -1,6 +1,6 @@
 async function fetchLogin(email, password) {
     try {
-        const response = await fetch('https:///auth/login', {
+        const response = await fetch('https://interviewai-ij1p.onrender.com/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
