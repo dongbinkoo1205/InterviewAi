@@ -5,19 +5,21 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 10000;
 
+const cors = require('cors');
+
 app.use(
     cors({
         origin: [
-            'https://interview-ai-omega.vercel.app', // 배포된 프론트엔드 도메인 추가
-            'http://localhost:5173', // 개발 환경 (로컬에서 테스트 중일 경우)
+            'https://interview-ai-omega.vercel.app', // 프론트엔드 도메인
+            'http://localhost:5173', // 개발 환경
         ],
-        methods: ['GET', 'POST', 'OPTIONS'],
-        allowedHeaders: ['Content-Type', 'Authorization'],
-        credentials: true, // 인증 정보 포함
+        methods: ['GET', 'POST', 'OPTIONS'], // 허용할 HTTP 메서드
+        allowedHeaders: ['Content-Type', 'Authorization'], // 허용할 헤더
+        credentials: true, // 인증 정보 포함 허용
     })
 );
 
-// 프리플라이트 요청 수동 처리 (옵션)
+// CORS 프리플라이트 요청 수동 처리
 app.options('*', cors());
 
 // ✅ JSON 요청을 처리하도록 설정
