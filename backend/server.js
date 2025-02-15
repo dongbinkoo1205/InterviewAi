@@ -35,7 +35,8 @@ app.use('/api/interview', interviewResultRoutes); // 인터뷰 결과 API
 app.use('/api/jobnews', jobNewsRoutes); // 직무 뉴스 API
 
 // 서버 실행
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
+
 app.listen(PORT, () => {
     console.log(`✅ Server running on port ${PORT}`);
     console.log(`🔗 API is live at: ${process.env.RENDER_EXTERNAL_URL || 'http://localhost:' + PORT}`);
