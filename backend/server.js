@@ -18,9 +18,6 @@ app.use(
     })
 );
 
-// CORS 프리플라이트 요청 수동 처리
-app.options('*', cors());
-
 // ✅ JSON 요청을 처리하도록 설정
 app.use(express.json());
 
