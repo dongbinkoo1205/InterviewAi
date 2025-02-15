@@ -4,8 +4,7 @@ require('dotenv').config();
 
 const router = express.Router();
 
-// Google News API 설정
-const GOOGLE_NEWS_API_KEY = process.env.NEWS_API_KEY;
+const GOOGLE_NEWS_API_KEY = process.env.NEWS_API_KEY; // .env 파일에서 API 키 가져오기
 const GOOGLE_NEWS_API_URL = 'https://newsapi.org/v2/everything';
 
 // 뉴스 데이터 요청 라우트
