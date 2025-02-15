@@ -12,7 +12,7 @@ const configuration = new Configuration({
 // OpenApi 사용
 const openai = new OpenAIApi(configuration);
 
-router.post('/api/generate-questions', async (req, res) => {
+router.post('/generate-questions', async (req, res) => {
     console.log('Received request:', req.body);
     const { job } = req.body;
 
