@@ -39,7 +39,7 @@ const jobNewsRoutes = require('./route/JobNews'); // 직무 뉴스 라우트
 app.use('/auth', loginRoutes);
 app.use('/api/openai', openApiRoutes);
 app.use('/api/interview', interviewResultRoutes);
-app.use('/api', jobNewsRoutes);
+app.use('/api/news', jobNewsRoutes);
 
 // ✅ 서버 실행
 app.listen(PORT, () => {

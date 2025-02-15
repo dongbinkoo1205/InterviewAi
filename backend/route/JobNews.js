@@ -9,7 +9,7 @@ const GOOGLE_NEWS_API_URL = 'https://newsapi.org/v2/everything';
 
 router.get('/news', async (req, res) => {
     try {
-        const query = req.params.query; // URL 파라미터에서 쿼리값 받기
+        const { query } = req.query;
         console.log('Received query:', query); // 쿼리값 확인
 
         // 쿼리 파라미터가 없으면 에러 처리
