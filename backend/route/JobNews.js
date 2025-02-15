@@ -7,7 +7,7 @@ const router = express.Router();
 const GOOGLE_NEWS_API_KEY = process.env.NEWS_API_KEY; // .env 파일에서 API 키 가져오기
 const GOOGLE_NEWS_API_URL = 'https://newsapi.org/v2/everything';
 
-router.get('/news', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const { query } = req.query;
         console.log('Received query:', query); // 쿼리값 확인
