@@ -10,7 +10,7 @@ app.use(
     cors({
         origin: [
             'http://localhost:5173', // 개발 환경
-            'https://interview-c4s12l05c-dongbinkoos-projects.vercel.app', // 배포된 프론트엔드
+            'https://interview-fbrvrb7a7-dongbinkoos-projects.vercel.app', // 배포된 프론트엔드
         ],
         methods: ['GET', 'POST', 'OPTIONS'], // 허용할 HTTP 메서드
         allowedHeaders: ['Content-Type', 'Authorization'], // 허용할 헤더
