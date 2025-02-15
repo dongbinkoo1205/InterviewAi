@@ -5,17 +5,20 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 10000;
 
+// CORS 설정
 app.use(
     cors({
         origin: [
             'http://localhost:5173', // 개발 환경
             'https://interview-c4s12l05c-dongbinkoos-projects.vercel.app', // 배포된 프론트엔드
         ],
-        methods: ['GET', 'POST', 'OPTIONS'],
-        allowedHeaders: ['Content-Type'],
-        credentials: true,
+        methods: ['GET', 'POST', 'OPTIONS'], // 허용할 HTTP 메서드
+        allowedHeaders: ['Content-Type', 'Authorization'], // 허용할 헤더
+        credentials: true, // 인증 정보 포함
     })
 );
+
+app.options('*', cors());
 
 // ✅ CORS 프리플라이트 요청 수동 처리
 app.options('*', cors());
