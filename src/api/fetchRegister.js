@@ -6,6 +6,7 @@ async function fetchRegister(name, email, password) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ name, email, password }),
+            credentials: true, // 인증 정보(쿠키, 헤더) 포함 허용
         });
 
         const data = await response.json(); // 🔹 response.json()을 한 번만 호출

@@ -6,6 +6,7 @@ async function fetchLogin(email, password) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ email, password }),
+            credentials: true, // 인증 정보(쿠키, 헤더) 포함 허용
         });
 
         const data = await response.json(); // JSON 파싱
