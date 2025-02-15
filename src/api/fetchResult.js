@@ -4,7 +4,7 @@ async function fetchResult(answers, questions) {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ answers, questions }),
-            credentials: true, // 인증 정보(쿠키, 헤더) 포함 허용
+            credentials: 'include', // 인증 정보(쿠키, 헤더) 포함 허용
         });
 
         if (!response.ok) {

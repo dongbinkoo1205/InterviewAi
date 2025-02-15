@@ -18,7 +18,7 @@ app.use(
         ],
         methods: ['GET', 'POST', 'OPTIONS'],
         allowedHeaders: ['Content-Type'],
-        credentials: true, // 쿠키 포함 요청 허용
+        credentials: true,
     })
 );
 
