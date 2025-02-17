@@ -43,7 +43,7 @@ export const QuestionProvider = ({ children }) => {
 
     const handleJobSubmit = async (fetchQuestions, job) => {
         try {
-            // ※ 순서 중요! 직무선택 버튼 누르자마자 IsLoading 체크 후에 질문을 gpt에게  받아야함
+            // ※ 순서 중요! 직무선택 버튼 누르자마자 IsLoading 체크 후에 질문을 gpt에게 받아야함
             setIsLoading(true);
             const generatedQuestions = await fetchQuestions(job);
             setQuestions(generatedQuestions);
