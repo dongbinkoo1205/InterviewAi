@@ -232,7 +232,7 @@ function QuestionList() {
                     )}
                 </Box>
             </Box>
-            <Box>{AllClear && <SlideNotification />}</Box>
+            <Box>{answers.length == 0 && <SlideNotification />}</Box>
         </Box>
     );
 }
